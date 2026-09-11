@@ -7,3 +7,10 @@ class Prato(ItemCardapio):
 
     def __str__(self):
         return self._nome
+
+    @property
+    def aplicar_desconto(self):
+        if self._preco >= 2:
+            self._preco -= (self._preco * 0.05)
+        else:
+            pass

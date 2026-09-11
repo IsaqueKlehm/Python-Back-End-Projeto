@@ -7,3 +7,10 @@ class Bebida(ItemCardapio):
 
     def __str__(self):
         return self._nome
+
+    @property
+    def aplicar_desconto(self):
+        if self._preco >= 5:
+            self._preco -= (self._preco * 0.08)
+        else:
+            pass
